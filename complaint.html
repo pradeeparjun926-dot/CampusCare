@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusCare - Report Problem</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <div class="logo">
+            CampusCare
+        </div>
+
+        <div class="nav-links">
+
+            <a href="student.html">
+                Dashboard
+            </a>
+
+            <button onclick="logout()">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Complaint Form -->
+
+    <main class="complaint-page">
+
+        <div class="complaint-card">
+
+            <h1>
+                🚨 Report a Campus Problem
+            </h1>
+
+            <p class="form-subtitle">
+                Tell us about the problem. We will connect it
+                with the right department.
+            </p>
+
+
+            <form id="complaintForm">
+
+
+                <!-- Category -->
+
+                <label for="category">
+                    Problem Category
+                </label>
+
+                <select id="category" required>
+
+                    <option value="">
+                        Select Category
+                    </option>
+
+                    <option value="Emergency">
+                        🚨 Emergency
+                    </option>
+
+                    <option value="Maintenance">
+                        🔧 Maintenance
+                    </option>
+
+                    <option value="Security">
+                        🛡️ Security
+                    </option>
+
+                    <option value="Electrical">
+                        💡 Electrical
+                    </option>
+
+                    <option value="Water">
+                        🚰 Water
+                    </option>
+
+                    <option value="Other">
+                        📢 Other
+                    </option>
+
+                </select>
+
+
+                <!-- Location -->
+
+                <label for="location">
+                    Problem Location
+                </label>
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Example: Block A, Room 204"
+                    required
+                >
+
+
+                <!-- Title -->
+
+                <label for="title">
+                    Problem Title
+                </label>
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Example: Fan not working"
+                    required
+                >
+
+
+                <!-- Description -->
+
+                <label for="description">
+                    Describe the Problem
+                </label>
+
+                <textarea
+                    id="description"
+                    rows="5"
+                    placeholder="Explain the problem clearly..."
+                    required>
+                </textarea>
+
+
+                <!-- Photo -->
+
+                <label for="photo">
+                    Upload Photo (Optional)
+                </label>
+
+                <input
+                    type="file"
+                    id="photo"
+                    accept="image/*"
+                >
+
+
+                <!-- Submit -->
+
+                <button
+                    type="submit"
+                    class="submit-complaint-btn">
+
+                    🚀 Submit Complaint
+
+                </button>
+
+            </form>
+
+
+            <p id="complaintMessage"></p>
+
+
+            <a
+                href="student.html"
+                class="back-dashboard">
+
+                ← Back to Dashboard
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <script src="complaint.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusCare - Student Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav>
+
+        <div class="logo">
+            CampusCare
+        </div>
+
+        <div class="nav-links">
+
+            <span id="studentName">
+                Student
+            </span>
+
+            <button onclick="logout()">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Dashboard -->
+
+    <main class="dashboard">
+
+        <div class="dashboard-header">
+
+            <div>
+
+                <h1>
+                    Welcome, Student 👋
+                </h1>
+
+                <p>
+                    Report and track your campus problems easily.
+                </p>
+
+            </div>
+
+            <button
+                class="report-btn"
+                onclick="goToComplaint()">
+
+                🚨 Report a Problem
+
+            </button>
+
+        </div>
+
+
+        <!-- Category Cards -->
+
+        <section class="category-section">
+
+            <h2>
+                What do you want to report?
+            </h2>
+
+
+            <div class="category-grid">
+
+
+                <div
+                    class="category-card"
+                    onclick="reportCategory('Emergency')">
+
+                    <div class="category-icon">
+                        🚨
+                    </div>
+
+                    <h3>
+                        Emergency
+                    </h3>
+
+                    <p>
+                        Urgent campus emergency
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="category-card"
+                    onclick="reportCategory('Maintenance')">
+
+                    <div class="category-icon">
+                        🔧
+                    </div>
+
+                    <h3>
+                        Maintenance
+                    </h3>
+
+                    <p>
+                        Building or equipment problem
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="category-card"
+                    onclick="reportCategory('Security')">
+
+                    <div class="category-icon">
+                        🛡️
+                    </div>
+
+                    <h3>
+                        Security
+                    </h3>
+
+                    <p>
+                        Security related issue
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="category-card"
+                    onclick="reportCategory('Electrical')">
+
+                    <div class="category-icon">
+                        💡
+                    </div>
+
+                    <h3>
+                        Electrical
+                    </h3>
+
+                    <p>
+                        Electrical problem
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="category-card"
+                    onclick="reportCategory('Water')">
+
+                    <div class="category-icon">
+                        🚰
+                    </div>
+
+                    <h3>
+                        Water
+                    </h3>
+
+                    <p>
+                        Water leakage or supply issue
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="category-card"
+                    onclick="reportCategory('Other')">
+
+                    <div class="category-icon">
+                        📢
+                    </div>
+
+                    <h3>
+                        Other
+                    </h3>
+
+                    <p>
+                        Other campus problems
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Complaint Statistics -->
+
+        <section class="stats-section">
+
+            <h2>
+                My Complaints
+            </h2>
+
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <h3 id="totalComplaints">
+                        0
+                    </h3>
+
+                    <p>
+                        Total
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3 id="pendingComplaints">
+                        0
+                    </h3>
+
+                    <p>
+                        Pending
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3 id="solvedComplaints">
+                        0
+                    </h3>
+
+                    <p>
+                        Solved
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Complaint List -->
+
+        <section class="complaints-section">
+
+            <h2>
+                Recent Complaints
+            </h2>
+
+            <div id="complaintList">
+
+                <div class="empty-message">
+
+                    <p>
+                        No complaints submitted yet.
+                    </p>
+
+                    <button
+                        onclick="goToComplaint()">
+
+                        Report your first problem
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="student.js"></script>
+
+</body>
+
+</html>
